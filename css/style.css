@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --offWhite: hsl(0, 0%, 94%);
+    --light--gray: hsl(0, 0%, 86%);
+    --smoke--gray: hsl(0, 1%, 44%);
+    --off--black: hsl(0, 0%, 8%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.red {
+    color: red;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 94%);
+}
+
+.container {
+    font-family: 'Poppins', sans-serif;
+    width: 375px;
+    border-radius: 10px;
+    border-bottom-right-radius: 100px;
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    place-content: center;
+    padding-block: 2em;
+}
+
+.container input[type="date"] {
+    position: absolute;
+    height: 20px;
+    padding: .2em;
+    right: -28px;
+    top: 31px;
+    width: 18px;
+    border: 1px solid var(--light--gray);
+}
+
+form {
+    margin-bottom: 2em;
+    border-bottom: 1px solid var(--light--gray);
+    position: relative;
+    padding-bottom: 3em;
+}
+
+form button {
+    display: block;
+    background-color: var(--purple);
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: none;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+form button svg {
+    width: 60%;
+}
+
+.birthday {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    color: var(--smoke--gray);
+}
+
+.birthday div>* {
+    display: block;
+    width: 65px;
+}
+
+.birthday div input {
+    width: 65px;
+    line-height: 2.5rem;
+    padding-left: .8rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    border: 1px solid var(--light--gray);
+    border-radius: 5px;
+}
+
+.age p {
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 2.7rem;
+}
+
+.age p span {
+    color: var(--purple);
+}
+
+/* err message */
+form .birthday div p {
+    display: none;
+    color: red;
+    font-size: .7rem;
+    font-weight: 400;
+    font-style: italic;
+}
